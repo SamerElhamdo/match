@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}samer live{% endblock %}</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link id="change-color"  href="{% static 'css/base.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="setting">
+        <span>غيير اللون</span>
+        <p id="tow-color" class="b-color-2 color-2"><span id="buttonActive" class="b-color-1"></span></p>
+        
+    </div>
+    <div class="hedar  ">
+        <div class="overlaye b-color-1">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo-img">
+                        img
+                    </div>
+                    <div class="logo-name color-2">
+                        <p class="en">clasico-live</p>
+                    </div>
+                </div>
+                <div class="navbar">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content color-1">
+        <div class="container">
+            <div class="message ">
+
+                <ul class="color-1 b-color-2   ">
+                    <li class="active">
+                        الرئيسية
+                    </li>
+                    <li>
+                        البث الخاص
+                    </li>
+                    <li>
+                        من نحن
+                    </li>
+                    <li>
+                        ضع أعلاناً
+                    </li>
+                </ul>
+                <div class="soical-media b-color-2 color-1  ">
+                    <span>تابعنا</span>
+                    <i class="fab fa-facebook active"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+        
+        
+            </div>
+            <div class="side-bar b-color-2  ">
+                <div class="toggle-button">
+                <div>أهدلف وملخصات</div>
+                <div class="active">ترتيب الدوريات</div>
+                </div>
+
+                <div class="lig">
+                    <table>
+                        <tr>
+                            <th class="table-name" colspan="5">الدوري الانجليزي الممتاز</th>
+                        </tr>
+                        <tr>
+                            <th>مركز</th>
+                            <th>النادي</th>
+                            <th>لعب</th>
+                            <th>أهداف</th>
+                            <th>نقاط</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>ريال مدريد</td>
+                            <td>45</td>
+                            <td>+88</td>
+                            <td>101</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>ريال مدريد</td>
+                            <td>38</td>
+                            <td>+88</td>
+                            <td>101</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>ريال مدريد</td>
+                            <td>38</td>
+                            <td>+88</td>
+                            <td>101</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>ريال مدريد</td>
+                            <td>38</td>
+                            <td>+88</td>
+                            <td>101</td>
+                        </tr>
+                        
+                    </table>
+                    
+                </div>
+                <div class="goals">
+                </div>
+            </div>
+            <div class="list-match">
+                <div class="select-day">
+                    <ul class="b-color-1 color-1 ">
+                        <li name="tomorrow">
+                            <div class="cell">
+                                مباريات الغد                                      
+                            </div>
+                        </li>
+                        <li name="today" class="active">
+                            <div class="cell">
+                                مباريات اليوم
+                            </div>
+                        </li>
+                        <li name="yesterday">
+                            <div class="cell">
+                                مباريات الامس
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                {% block content %}
+	
+                <!------------------------------------------------------------- content blok--------------->
+                <div class="day active" id="yesterday">
+                    <div class="card-match b-color-2 color-1 ">
+                        <div class="card-match-up">
+                            <ul>
+                                <li>
+                                    <div class="logo-team">
+                                        <img src="http://www.albacetebalompie.es/wp-content/uploads/2015/08/barcelona.png">
+                                    </div>
+                                    <div class="name-team">
+                                        <p> برشلونة </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="result-left en">2</span>
+                                    <button class="color-1">شاهد المبارة</button>
+                                    <span class="result-right en">2</span>
+                                </li>
+                                <li>
+                                    <div class="name-team">
+                                        <p> أتليتيكو بلباو</p>
+                                    </div>
+                                    <div class="logo-team">
+                                        <img src="https://i2.wp.com/dlscenter.com/wp-content/uploads/2017/10/Athletic-Bilbao-Logo.png">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-match-down b-color-2   color-1">
+                            <ul>
+                                <li>
+                                    <p class="en">GMT 18:00 - KSA 20:00</p>
+
+                                </li>
+                                <li>
+                                    <p>الدوري الأسباني</p>
+                                </li>
+                                <li>
+                                    <p class="en">BeIn Sport HD 1</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>              
+                </div>
+                <div class="day" id="today">
+                    <div class="card-match b-color-2 color-1 ">
+                        <div class="card-match-up">
+                            <ul>
+                                <li>
+                                    <div class="logo-team">
+                                        <img src="http://www.albacetebalompie.es/wp-content/uploads/2015/08/barcelona.png">
+                                    </div>
+                                    <div class="name-team">
+                                        <p> برشلونة </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="result-left en">2</span>
+                                    <button class="color-1">شاهد المبارة</button>
+                                    <span class="result-right en">2</span>
+                                </li>
+                                <li>
+                                    <div class="name-team">
+                                        <p> أتليتيكو بلباو</p>
+                                    </div>
+                                    <div class="logo-team">
+                                        <img src="https://i2.wp.com/dlscenter.com/wp-content/uploads/2017/10/Athletic-Bilbao-Logo.png">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="day" id="tomorrow"> 
+                    <div class="card-match b-color-2 color-1 ">
+                        <div class="card-match-up">
+                            <ul>
+                                <li>
+                                    <div class="logo-team">
+                                        <img src="http://www.albacetebalompie.es/wp-content/uploads/2015/08/barcelona.png">
+                                    </div>
+                                    <div class="name-team">
+                                        <p> برشلونة </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="result-left en">2</span>
+                                    <button class="color-1">شاهد المبارة</button>
+                                    <span class="result-right en">2</span>
+                                </li>
+                                <li>
+                                    <div class="name-team">
+                                        <p> أتليتيكو بلباو</p>
+                                    </div>
+                                    <div class="logo-team">
+                                        <img src="https://i2.wp.com/dlscenter.com/wp-content/uploads/2017/10/Athletic-Bilbao-Logo.png">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-match-down b-color-2   color-1">
+                            <ul>
+                                <li>
+                                    <p class="en">GMT 18:00 - KSA 20:00</p>
+
+                                </li>
+                                <li>
+                                    <p>الدوري الأسباني</p>
+                                </li>
+                                <li>
+                                    <p class="en">BeIn Sport HD 1</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endblock %}
+                <!------------------------------------------------------------- content blok--------------->
+            </div>
+        </div>
+    </div>
+    <script src="../../../static/jQuery.js"></script>
+    <script src="../../../static/main.js"></script>
+    
+</body>
+</html>

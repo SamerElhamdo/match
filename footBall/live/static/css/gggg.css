@@ -1,0 +1,66 @@
+/*.color-1 {
+    color: #38003c;
+}
+
+.b-color-1 {
+    background: #38003c;
+}*/
+
+.color-2 {
+    color: #e90052;
+}
+
+.b-color-2 {
+    background: #e90052;
+}
+
+
+/*------------------------------------------------------------------------------------------*/
+.content .side-bar .toggle-button div:nth-last-of-type(1) {
+    border-left: 2px solid #38003c ;
+
+}
+
+.content .side-bar .toggle-button div:hover {
+    background: #38003c;
+    color: #e90052
+}
+.content .side-bar .toggle-button .active {
+    background: #38003c;
+    color: #e90052
+}
+/*-----------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------*/
+.select-day ul .active {
+    background: none;
+    color: #e90052;
+    border-color: #38003c
+
+}
+
+.select-day ul li:hover {
+    background: #38003c;
+    color: #e90052;
+    border-color: #38003c;
+    cursor: pointer;
+}
+
+/*------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------*/
+.card-match .card-match-up ul li button:hover {
+    color: #fff;
+    background: #38003c;
+    cursor: pointer;
+    border: 3px solid #38003c ;
+
+    
+}
+/*------------------------------------------------------------------------------------*/

@@ -1,0 +1,170 @@
+{% extends "live/base.html" %}
+{% load static %}
+{% block title %}Samer live{% endblock %}
+
+{% block content %}
+            
+                <div class="select-day">
+                    <ul class="b-color-1 color-1 ">
+                        <li name="tomorrow">
+                            <div class="cell">
+                                مباريات الغد                                      
+                            </div>
+                        </li>
+                        <li name="today" class="active">
+                            <div class="cell">
+                                مباريات اليوم
+                            </div>
+                        </li>
+                        <li name="yesterday">
+                            <div class="cell">
+                                مباريات الامس
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            
+                <div class="day" id="yesterday">
+                    {% for match in matchs_yesterday %}
+                    <div class="card-match b-color-2 color-1 ">
+                        <div class="card-match-up .b-color-2">
+                            <ul>
+                                <li>
+                                    <div class="logo-team">
+                                        <img src="http://www.albacetebalompie.es/wp-content/uploads/2015/08/barcelona.png">
+                                    </div>
+                                    <div class="name-team">
+                                        <p> {{match.home_team_1}} </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="result-left en">2</span>
+                                    <a href="{{ match.get_absolute_url }}"><button class="color-1">شاهد المبارة</button></a>
+                                    <span class="result-right en">2</span>
+                                </li>
+                                <li>
+                                    <div class="name-team">
+                                        <p> {{match.guest_team_2}}</p>
+                                    </div>
+                                    <div class="logo-team">
+                                        <img src="https://i2.wp.com/dlscenter.com/wp-content/uploads/2017/10/Athletic-Bilbao-Logo.png">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-match-down b-color-2   color-1">
+                            <ul>
+                                <li>
+                                    <p class="en time">{{match.match_time}}</p>
+
+                                </li>
+                                <li>
+                                    <p>{{match.lig}}</p>
+                                </li>
+                                <li>
+                                    <p class="en">{{match.channel}}</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="day active" id="today">
+                    {% for match in matchs_today %}
+                    <div class="card-match b-color-2 color-1 ">
+                        <div class="card-match-up ">
+                            <ul>
+                                <li>
+                                    <div class="logo-team">
+                                        <img src="http://www.albacetebalompie.es/wp-content/uploads/2015/08/barcelona.png">
+                                    </div>
+                                    <div class="name-team">
+                                        <p> {{match.home_team_1}} </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="result-left en">2</span>
+                                    <a href="{{ match.get_absolute_url }}"><button class="color-1">شاهد المبارة</button></a>
+                                    <span class="result-right en">2</span>
+                                </li>
+                                <li>
+                                    <div class="name-team">
+                                        <p> {{match.guest_team_2}}</p>
+                                    </div>
+                                    <div class="logo-team">
+                                        <img src="https://i2.wp.com/dlscenter.com/wp-content/uploads/2017/10/Athletic-Bilbao-Logo.png">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-match-down    color-1">
+                            <ul>
+                                <li>
+                                    <p class="en time">{{match.match_time}}</p>
+
+                                </li>
+                                <li>
+                                    <p>{{match.lig}}</p>
+                                </li>
+                                <li>
+                                    <p class="en">{{match.channel}}</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="day" id="tomorrow">
+                    {% for match in matchs_tomorrow %}
+                    <div class="card-match b-color-2 color-1 ">
+                        <div class="card-match-up .b-color-2">
+                            <ul>
+                                <li>
+                                    <div class="logo-team">
+                                        <img src="http://www.albacetebalompie.es/wp-content/uploads/2015/08/barcelona.png">
+                                    </div>
+                                    <div class="name-team">
+                                        <p> {{match.home_team_1}} </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="result-left en">2</span>
+                                    <a><button class="color-1">شاهد المبارة</button></a>
+                                    <span class="result-right en">2</span>
+                                </li>
+                                <li>
+                                    <div class="name-team">
+                                        <p> {{match.guest_team_2}}</p>
+                                    </div>
+                                    <div class="logo-team">
+                                        <img src="https://i2.wp.com/dlscenter.com/wp-content/uploads/2017/10/Athletic-Bilbao-Logo.png">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-match-down b-color-2   color-1">
+                            <ul>
+                                <li>
+                                    <p class="en time">{{match.match_time}}</p>
+
+                                </li>
+                                <li>
+                                    <p>{{match.lig}}</p>
+                                </li>
+                                <li>
+                                    <p class="en">{{match.channel}}</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            
+
+
+
+{% endblock %}

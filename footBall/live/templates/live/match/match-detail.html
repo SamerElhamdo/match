@@ -1,0 +1,75 @@
+{% extends 'live/base.html' %}
+{% block content %}
+
+
+<div class="day active">
+<div class="card-match card-match-live  b-color-2 color-1 ">
+    <div class="card-match-up  .card-match-live-up  .b-color-2">
+        <ul>
+            <li>
+                <div class="logo-team">
+                    <img src="http://www.albacetebalompie.es/wp-content/uploads/2015/08/barcelona.png">
+                </div>
+                <div class="name-team">
+                    <p> {{match.home_team_1}} </p>
+                </div>
+            </li>
+            <li>
+                
+                <span class="result-left en">2</span>
+                <button style="border: none;" class="color-1">جارية الان</button>
+                <span class="result-right en">2</span>
+
+            </li>
+            <li>
+                <div class="name-team">
+                    <p> {{match.guest_team_2}}</p>
+                </div>
+                <div class="logo-team">
+                    <img src="https://i2.wp.com/dlscenter.com/wp-content/uploads/2017/10/Athletic-Bilbao-Logo.png">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="card-match-video">
+        <div class="select-link">
+            <ul class="b-color-1 color-1 ">
+                <li name="link-one" class="active">
+                    <div >
+                        البث الرئيسي                                      
+                    </div>
+                </li>
+                <li name="link-tow" >
+                    <div>
+                        HD جودة عالية
+                    </div>
+                </li>
+                <li name="link-three">
+                    <div>
+                        جودة متوسطة
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <iframe style="width: 100%; height: 400px;"></iframe>
+    </div>
+    <div class="card-match-down card-match-live-down b-color-2   color-1">
+        <ul>
+            <li>
+                <p>عصام الشوالي</p>
+
+            </li>
+            <li>
+                <p>{{match.lig}}</p>
+            </li>
+            <li>
+                <p class="en">{{match.channel}}</p>
+            </li>
+
+        </ul>
+    </div>
+</div>
+</div>
+
+{% endblock %}
