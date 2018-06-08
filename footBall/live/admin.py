@@ -5,6 +5,7 @@ import decimal
 #admin.site.register(models.Product) # This will add Product to admin site
 admin.site.register(models.Lig) # This will add Category to admin site
 admin.site.register(models.Channel)
+admin.site.register(models.Team)
 admin.site.site_header = "Match live  Administration"
 
 admin.site.site_title = "Match live Administration"

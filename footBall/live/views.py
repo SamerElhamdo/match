@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Match, Channel, Lig
+from .models import Match, Channel, Lig, Team
 import datetime
 
 print(datetime.date)
@@ -25,10 +25,13 @@ def match_detail(request, slug):
     match = get_object_or_404(Match, slug=slug)
     return render(request, 'live/match/match-detail.html', {'match': match})
 
+def team_detail(request, slug):
+    team = get_object_or_404(Team, slug=slug)
+    return render(request, 'live/match/team-detail.html', {'team': team})
 
-def match_list_by_lig(request, slug):
-    lig = get_object_or_404(Lig, slug=slug)
-    return render(request, 'live/match/lig_by_match.html', {'lig': lig})
+
+
+
 
 # Create your views here.
 print(datetime.date)
