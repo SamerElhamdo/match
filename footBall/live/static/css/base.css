@@ -14,6 +14,7 @@ body {
 
 
 }
+
 .en {
     font-family: myFirstFont
 }
@@ -111,7 +112,7 @@ body {
 /* end min -------------------------------------------------------------------------*/
 .hedar {
     width: 100%;
-    height: 150px;
+    height: 200px;
     overflow: hidden;
   
 
@@ -181,6 +182,11 @@ body {
     transition: ease-in-out .5s
 }
 
+.message ul li a {
+    text-decoration: none;
+     color: #38003c;
+}
+
 .message ul .active {
     border-bottom: 3px solid;
 
@@ -190,6 +196,9 @@ body {
    background: #38003c;
     color: #00ff85;
 
+}
+.message ul li:hover a {
+    color: #00ff85;
 }
 
 .message .soical-media {
@@ -287,7 +296,7 @@ body {
     color: #38003c
 }
 /*-----------------------------------------------------------------------------*/
-.content .side-bar .goals ,.content .side-bar .lig {
+.content .side-bar #goals ,.content .side-bar #liga {
     width: 100%;
 
 }
@@ -297,7 +306,7 @@ body {
 .content .side-bar .side-content .active {
     display: block;
 }
-.content .side-bar .goals ,.content .side-bar .lig table {
+.content .side-bar #goals ,.content .side-bar #liga table {
     max-width: 100%;
     width: 100%;
     direction: rtl;
@@ -307,13 +316,13 @@ body {
 
 }
 
-.content .side-bar .lig table .table-name {
+.content .side-bar #liga table .table-name {
 
     border-top: 3px solid;
 
 
 }
-.content .side-bar .lig table td,th {
+.content .side-bar #liga table td,th {
     border-bottom: 1px solid;
     border: 1px solid;   
     text-align: center;
@@ -321,18 +330,18 @@ body {
 
     
 }
-.content .side-bar .lig table td {
+.content .side-bar #liga table td {
     font-size: 1.5em;
 }
-.content .side-bar .lig table td:nth-of-type(2) {
+.content .side-bar #liga table td:nth-of-type(2) {
     font-size: 1.3em;
 }
 
-.content .side-bar .goals {
+.content .side-bar #goals {
     border: none;
 }
 
-.content .side-bar .goals .card-goals {
+.content .side-bar #goals .card-goals {
     width: 100%;
     margin-top: 20px;
     text-align: center;
@@ -342,20 +351,20 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius:  0;
 }
-.content .side-bar .goals .card-goals h2 {
+.content .side-bar #goals .card-goals h2 {
     width: 100%;
     text-align: center;
     margin: 0;
 }
-.content .side-bar .goals .card-goals p {
+.content .side-bar #goals .card-goals p {
     display: inline-block;
     margin: 0 5px;;
     font-size: 1.2em;
 }
-.content .side-bar .goals .card-goals .goals-video {
+.content .side-bar #goals .card-goals #goals-video {
     width: 100%;
 }
-.content .side-bar .goals .card-goals .goals-info {
+.content .side-bar #goals .card-goals #goals-info {
     width: 100%;
     border-top: 1px solid;
 }
@@ -472,7 +481,7 @@ body {
 .card-match .card-match-up ul li span {
     display: inline-block;
     height: 100%;
-    width: 25%;
+    width: 20%;
     line-height: 70px;
     font-size: 2.5em;
 }
@@ -485,7 +494,7 @@ body {
 .card-match .card-match-up ul li button {
     font-size: 1.4em;
     font-family: AlHurra;
-    width: 50%;
+    width: 60%;
     border: 3px solid ;
     background: none;
     transition: 0.5s;
@@ -497,7 +506,7 @@ body {
 
 }
 /*------------------------------------------------------------------------------------*/
-.card-match .card-match-up ul li button:hover {
+.card-match .card-match-up ul li .noneHover:hover {
     color: #fff;
     background: #38003c;
     cursor: pointer;
@@ -568,13 +577,10 @@ ul li .name-team p {
     display: inline-block;
     text-align: center;
     width: 100%;
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 1px;
     height: 100%;
     line-height: 30px;
-}
-.card-match .card-match-down ul li:nth-last-of-type(2) p { 
-    font-size: 1em
 }
 
 /* صفحة المبارة------------------------------------------------------------------------------------------- */
@@ -592,13 +598,18 @@ ul li .name-team p {
 .card-match-video {
     height:500px;
 }
-.card-match-video iframe {
+.card-match-video .view {
     width: 96%  !important;
     height: 84%  !important;
-    display: block;
     margin: 0 auto;
     background: #DDD
     
+}
+
+
+.card-match-video iframe {
+    width: 100% !important;
+    height: 100% !important;
 }
 .card-match-live-down {
     height: 30px !important;

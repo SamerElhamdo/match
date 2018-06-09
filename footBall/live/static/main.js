@@ -1,7 +1,6 @@
 $(document).ready(function(){
     //soical media-----------------------------
 
-    
     var  theDay = $(".day");
     function anmaTe (d) {
         var cards = d.find(".card-match");
@@ -56,30 +55,67 @@ $(document).ready(function(){
     
     // -------------------------------------------------الاختيار بين الدوريات و الملخصات
     
-        setInterval(function () {
+/*    var sideD = setInterval(function () {
+
+
         var SIDE = $(".side-content .active");
         if (SIDE.is(":last-child")) {
                 SIDE.fadeOut(function () {
                     $(".side-content div").eq(0).fadeIn().addClass("active").siblings().removeClass("active");
                 });
-                
+
         }
-                
+
         SIDE.fadeOut(function () {
             $(this).removeClass("active").next().fadeIn().addClass("active");
         });
+
+        if (x=0){
+            clearInterval(samer1);
+        }
+
+
     },8000);
-    
-    
-    
-        setInterval(function () {
+
+
+
+
+
+    var sideU = setInterval(function () {
+
         var SIDE = $(".toggle-button .active");
         if (SIDE.is(":last-child")) {
                 $(".toggle-button div").eq(0).addClass("active").siblings().removeClass("active");
         }
-                
+
         SIDE.removeClass("active").next().addClass("active");
     },8000);
+    
+    $(".side-bar").hover(function () {
+        clearInterval(sideD);
+        clearInterval(sideU);
+    });*/
+    
+    
+    (function () {
+        $(".toggle-button div").click(function () {
+            var selected = $(this).attr("name");
+            if ($(this).hasClass("active")) {
+                console.log("i hass class");
+            } else {
+                $(this).addClass("active").siblings().removeClass("active");
+                $("div[id=" + selected +"]").addClass("active").siblings().removeClass();
+            }
+        });
+        
+    } ());
+    
+    
+    
+    
+    
+    
+    
     
     // -------------------------------------------------الاختيار بين الدوريات و الملخصات
     
@@ -108,5 +144,48 @@ $(document).ready(function(){
         });
         
     }());
+    
+    
+    //-----------------------------امنع الافتراضي -------------------------------------------------------------------------------------------
+    
+    (function () {
+        $(".noneHover").click(function (event) {
+            var text = $(this).text(),
+                defultText = "تبدأ قريباً";
+            if (text == defultText) {
+                event.preventDefault();
+                alert("لم يبدأ البث بعد");
+            }
+        });
+    } ());
+    
+    
+    
+    
+    
+    
+    
+    
+        //-----------------------------امنع الافتراضي -------------------------------------------------------------------------------------------
+
+    
+    //change links ----------------------------------------------------------------------------------------------------------------------
+    
+    (function selcetLink () {
+        $("#view").html($("#link-one").text());
+        $(".select-link ul li").click(function() {
+            var selected = $(this).attr("name");
+            $(this).addClass("active").siblings().removeClass("active");
+            $("#view").html($("div[id=" + selected +"]").text()); 
+
+        });
+        
+        
+    } ());
+    
+    //change links ----------------------------------------------------------------------------------------------------------------------
+
+    
+    
     
 });

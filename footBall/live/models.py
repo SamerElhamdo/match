@@ -8,44 +8,22 @@ import datetime
 class Channel(models.Model):
     name = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
-    description = models.TextField(blank=True)
-    slug = models.SlugField(unique=True, blank=True)
-
 
 
 
     def __str__(self):
         return self.name
-
-    def save(self, *args, **kwargs):
-        if not self.id:
-            self.slug = slugify(self.name)
-        super().save(*args, **kwargs)
-
-    def get_absolute_url(self):
-        return reverse_lazy('match_detail', args=[self.slug])
-
 
 
 
 class Lig(models.Model):
     name = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
-    description = models.TextField(blank=True)
-    slug = models.SlugField(unique=True, blank=True)
 
 
     def __str__(self):
         return self.name
 
-    def save(self, *args, **kwargs):
-        if not self.id:
-            self.slug = slugify(self.name)
-
-        super().save(*args, **kwargs)
-
-    def get_absolute_url(self):
-        return reverse_lazy('match_detail', args=[self.slug])
 
 class Team(models.Model):
     name = models.CharField(max_length=100)
@@ -73,6 +51,7 @@ class Team(models.Model):
 
 
 class Match(models.Model):
+    status_match = models.CharField(max_length=100)
     home_team_1 = models.CharField(max_length=100)
     arabic_home_team_1 = models.CharField(max_length=100)
     guest_team_2 = models.CharField(max_length=100)

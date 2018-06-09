@@ -8,7 +8,7 @@
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
     <link id="change-color"  href="{% static 'css/base.css' %}" rel="stylesheet">
 </head>
-<body>
+<body >
     <div class="setting">
         <span>غيير اللون</span>
         <p id="tow-color" class="b-color-2 color-2"><span id="buttonActive" class="b-color-1"></span></p>
@@ -37,7 +37,7 @@
 
                 <ul class="color-1 b-color-2   ">
                     <li class="active">
-                        الرئيسية
+                       <a href="/">الرئيسية</a> 
                     </li>
                     <li>
                         البث الخاص
@@ -61,13 +61,13 @@
             </div>
             <div class="side-bar b-color-1">
                 <div class="toggle-button color-1">
-                <div >ترتيب الدوريات</div>
-                <div class="active" >أهدلف وملخصات</div>
+                <div name="liga">ترتيب الدوريات</div>
+                <div name="goals" class="active" >أهدلف وملخصات</div>
                 </div>
                 
                     <div class="side-content">
 
-                        <div class="lig">
+                        <div id="liga" class="lig">
                             <table>
                                 <tr>
                                     <th class="table-name" colspan="5">الدوري الانجليزي الممتاز</th>
@@ -111,7 +111,7 @@
                             </table>
 
                         </div>
-                    <div class="goals active">
+                    <div id="goals" class="goals active">
                         <div class="card-goals">
                             <div class="goals-title">
                                 <h2>مـلـخـص و أهــداف</h2>
@@ -120,7 +120,7 @@
                                 <p>برشلونة</p>
                             </div>
                             <div class="goals-video">
-                                <iframe></iframe>
+                                <iframe src="https://www.youtube.com/embed/I9LEezIONFQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
                             <div class="goals-info">
                                 <p class="en" style="font-size: 1.3em">2018-5-26</p>
@@ -135,7 +135,7 @@
                                 <p>برشلونة</p>
                             </div>
                             <div class="goals-video">
-                                <iframe></iframe>
+                                <iframe  src="//www.ok.ru/videoembed/759141501548" frameborder="0" allow="autoplay" allowfullscreen></iframe>
                             </div>
                             <div class="goals-info">
                                 <p class="en" style="font-size: 1.3em">2018-5-26</p>
