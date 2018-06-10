@@ -145,19 +145,30 @@ body {
     
 
 }
-.hedar .logo .logo-img {
+.hedar .logo .logo-img1 {
     width: 200px;
     height: 100%;
     display: inline-block;
     float: left;
     padding: 25px;
 }
-.hedar .logo .logo-img img {
+.hedar .logo .logo-img2 {
+    width: 200px;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    padding: 25px;
+}
+.hedar .logo .logo-img1 img {
+    width: 150px;
+    height: 150px;
+}
+.hedar .logo .logo-img2 img {
     width: 150px;
     height: 150px;
 }
 .hedar .logo .logo-name {
-    width: calc(100% - 200px);
+    width: calc(100% - 400px);
     height: 100%;
     display: inline-block;
     float: left;
@@ -170,12 +181,18 @@ body {
     border: 5px solid;
     border-bottom: none;
     margin: 0 auto;
-    background: rgba(221, 221, 221, 0.2);
+/*    background: rgba(221, 221, 221, 0.2);*/
     
 }
 .hedar .logo .logo-name div h1 {
-    height: 60px;
-    line-height: 60px;
+    height: 80px;
+    line-height: 80px;
+    padding: 0;
+    margin: 0
+}
+.hedar .logo .logo-name div h2 {
+    height: 40px;
+    line-height: 40px;
     padding: 0;
     margin: 0
 }
