@@ -3,6 +3,18 @@
     margin-top: 20px !important;
     opacity: 1 !important;
 }
+.background {
+  
+position:absolute;
+  
+display:block;
+  
+top: 0;
+  
+left: 0;
+  
+z-index: -1;
+}
 
 * {
     box-sizing: border-box;
@@ -16,7 +28,8 @@ body {
 }
 
 .en {
-    font-family: myFirstFont
+    font-family: myFirstFont;
+    font-size: 1.5em !important;
 }
 @font-face {
     font-family: myFirstFont;
@@ -114,6 +127,8 @@ body {
     width: 100%;
     height: 200px;
     overflow: hidden;
+    position: relative;
+    z-index: -2;
   
 
 }
@@ -124,29 +139,45 @@ body {
 
 }
 .hedar .logo {
-    width: 40%;
+    width: 100%;
     height: 100%;
     overflow: hidden;
     
 
 }
 .hedar .logo .logo-img {
-    width: 50%;
+    width: 200px;
     height: 100%;
     display: inline-block;
     float: left;
+    padding: 25px;
+}
+.hedar .logo .logo-img img {
+    width: 150px;
+    height: 150px;
 }
 .hedar .logo .logo-name {
-    width: 50%;
+    width: calc(100% - 200px);
     height: 100%;
     display: inline-block;
     float: left;
-    padding: auto
+    text-align: center;
+    padding: 40px 0;
 }
-
-.hedar .logo .logo-name p {
-    font-size: 3em;
-    margin: 0;
+.hedar .logo .logo-name div {
+    height: 120px;
+    width: 300px;
+    border: 5px solid;
+    border-bottom: none;
+    margin: 0 auto;
+    background: rgba(221, 221, 221, 0.2);
+    
+}
+.hedar .logo .logo-name div h1 {
+    height: 60px;
+    line-height: 60px;
+    padding: 0;
+    margin: 0
 }
 .hedar .navbar {
     width: 60%;
@@ -454,7 +485,7 @@ body {
 
 .card-match .card-match-up {
     width: 100%;
-    height: 75%;
+    height: 70px;
     overflow: hidden;
     border-bottom: .5px solid ;
  
@@ -484,6 +515,7 @@ body {
     width: 20%;
     line-height: 70px;
     font-size: 2.5em;
+    font-family: myFirstFont;
 }
 .card-match .card-match-up ul li .result-left {
     float: left;
@@ -554,7 +586,7 @@ ul li .name-team p {
 
 .card-match .card-match-down {
     width: 100%;
-    height: 25%;
+    height: 30px;
     overflow: hidden;
 }
 .card-match .card-match-down ul {
@@ -580,7 +612,7 @@ ul li .name-team p {
     font-size: 1.2em;
     padding: 1px;
     height: 100%;
-    line-height: 30px;
+    line-height: 15px;
 }
 
 /* صفحة المبارة------------------------------------------------------------------------------------------- */

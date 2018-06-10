@@ -185,7 +185,13 @@ $(document).ready(function(){
     
     //change links ----------------------------------------------------------------------------------------------------------------------
 
-    
+    window.onload= function() {
+        Particles.init({
+            selector:'.background',
+            color: '#ffffff',
+            
+        });
+    };
     
     
 });
